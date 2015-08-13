@@ -3,7 +3,7 @@
  * https://github.com/nabeix/css-floatparts
  */
 
-/* modal */
+/* modal and dialog */
 .fp-modal {
   display: none;
   z-index: 9999;
@@ -30,7 +30,7 @@
   text-align: left;
 }
 
-.fp-modal .content .header {
+.fp-modal .content > .header {
   background-color: #f0f0f0;
   padding: 3px;
   border-top-left-radius: 4px;
@@ -41,7 +41,9 @@
   padding: 3px;
 }
 
-.fp-modal .content .header h1, h2, h3 {
+.fp-modal .content .header h1,
+.fp-modal .content .header h2,
+.fp-modal .content .header h3 {
   margin: 0px;
 }
 
@@ -49,7 +51,7 @@
   padding: 3px;
 }
 
-@keyframes show-modal-content {
+@keyframes show-animation {
   from {
     opacity: 0;
     top: -20%;
@@ -64,13 +66,49 @@
   display: block;
 }
 
+
 .fp-modal.fp-show .content {
-  animation: show-modal-content .4s ease .0s;
+  animation: show-animation .4s ease .0s;
   animation-fill-mode: forwards;
 }
 
 /* dialog */
 .fp-dialog {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100px;
+  max-width: 90%;
+  min-height: 100px;
+  border-radius: 4px;
+  box-shadow: 0 1px 8px rgba(0 ,0 ,0 , .8);
+}
+
+.fp-dialog > .header {
+  background-color: #f0f0f0;
+  padding: 3px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.fp-dialog .header h1,
+.fp-dialog .header h2,
+.fp-dialog .header h3 {
+  margin: 0px;
+}
+
+.fp-dialog .body {
+  padding: 3px;
+}
+
+.fp-dialog .footer {
+  padding: 3px;
+}
+
+.fp-dialog.fp-show {
+  display: block;
 }
 
 /* tooltip */

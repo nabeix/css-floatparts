@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../floatparts.css">
         <title>CSS Floatparts</title>
         <style>
-         .modal-text {
+         .example-text {
              width: 500px;
          }
          .text-center {
@@ -24,6 +24,17 @@
              modalCloseBtn.addEventListener("click", function() {
                  modal.className  = "fp-modal";
              });
+
+             // dialog
+             var dialog = document.getElementById("mydialog");
+             var dialogOpenBtn = document.getElementById("dialog-open-btn");
+             var dialogCloseBtn = document.getElementById("dialog-close-btn");
+             dialogOpenBtn.addEventListener("click", function() {
+                 dialog.className += " fp-show";
+             });
+             dialogCloseBtn.addEventListener("click", function() {
+                 dialog.className  = "fp-dialog";
+             });
          };
         </script>
     </head>
@@ -35,7 +46,7 @@
                     <h3>Modal</h3>
                 </div>
                 <div class="body">
-                    <div class="modal-text">
+                    <div class="example-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
@@ -44,11 +55,24 @@
                 </div>
             </div>
         </div>
+        <div id="mydialog" class="fp-dialog">
+            <div class="header">
+                <h3>Modal</h3>
+            </div>
+            <div class="body">
+                <div class="example-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="footer text-center">
+                <a id="dialog-close-btn" href="javascript:void(0);">close</a>
+            </div>
+        </div>
         <div>
             <input id="modal-open-btn" type="button" value="open modal">
         </div>
         <div>
-            <input id="dialog-btn" type="button" value="open dialog">
+            <input id="dialog-open-btn" type="button" value="open dialog">
         </div>
     </body>
 </html>
