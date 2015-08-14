@@ -1,0 +1,52 @@
+/*!
+ * CSS Floatparts
+ * https://github.com/nabeix/css-floatparts
+ */
+
+// variables
+$modal-bg: rgba(0, 0, 0, .8);
+$content-bg: #fff;
+$content-padding: 5px 8px;
+$content-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.3), 0px 10px 25px 0px rgba(0, 0, 0, 0.25);
+$content-min-width: 300px;
+$content-max-width: 90%;
+$content-min-height: 100px;
+
+// common
+
+%content-base {
+  background-color: $content-bg;
+  min-width: $content-min-width;
+  max-width: $content-max-width;
+  min-height: $content-min-height;
+  box-shadow: $content-box-shadow;
+  width: 50%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%, -50%);
+}
+
+/* modal */
+
+.fp-modal {
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  background-color: $modal-bg;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .content {
+    @extend %content-base;
+
+    > .header {
+      background-color: $content-header-bg;
+      padding: 3px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+}
