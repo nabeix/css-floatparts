@@ -18,12 +18,12 @@
 .fp-modal .content {
   opacity: 0;
   background-color: #fff;
-  position: relative;
+  position: absolute;
   min-width: 300px;
   max-width: 90%;
   width: 50%;
   height: auto;
-  min-height: 100px;
+  min-height: 10px;
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.3), 0px 10px 25px 0px rgba(0, 0, 0, 0.25);
   left: 50%;
   top: 50%;
