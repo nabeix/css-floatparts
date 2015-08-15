@@ -27,6 +27,9 @@ $tooltip-offset-x: $tooltip-padding-left-right * 2;
 $tooltip-border-radius: 3px;
 $tooltip-arrow-height: 8px;
 $tooltip-background: rgba(0, 0, 0, 0.9);
+$tooltip-color: #fff;
+$tooltip-inverse-background: rgba(255, 255, 255, 0.9);
+$tooltip-inverse-color: #000;
 
 // animations
 
@@ -211,10 +214,15 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
   position: absolute;
   padding: $tooltip-padding;
   border-radius: $tooltip-border-radius;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
+  background-color: $tooltip-background;
+  color: $tooltip-color;
   top: 0px;
   left: 0px;
+
+  &.fp-inverse {
+    background-color: $tooltip-inverse-background;
+    color: $tooltip-inverse-color;
+  }
 }
 
 %tooltip-arrow-base {
@@ -231,6 +239,9 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
   bottom: -$tooltip-arrow-height;
   border-color: $tooltip-background transparent transparent transparent;
   border-width: $tooltip-arrow-height $tooltip-arrow-height 0 $tooltip-arrow-height;
+  &.fp-inverse {
+    border-color: $tooltip-inverse-background transparent transparent transparent;
+  }
 }
 
 %tooltip-arrow-up {
@@ -239,6 +250,9 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
   top: -$tooltip-arrow-height;
   border-color: transparent transparent $tooltip-background transparent;
   border-width: 0 $tooltip-arrow-height $tooltip-arrow-height $tooltip-arrow-height;
+  &.fp-inverse {
+    border-color: transparent transparent $tooltip-inverse-background transparent;
+  }
 }
 
 %tooltip-arrow-left {
@@ -246,6 +260,9 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
   left: -$tooltip-arrow-height;
   border-color: transparent $tooltip-background transparent transparent;
   border-width: $tooltip-arrow-height $tooltip-arrow-height $tooltip-arrow-height 0;
+  &.fp-inverse {
+    border-color: transparent $tooltip-inverse-background transparent transparent;
+  }
 }
 
 %tooltip-arrow-right {
@@ -253,6 +270,9 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
   right: -$tooltip-arrow-height;
   border-color: transparent transparent transparent $tooltip-background;
   border-width: $tooltip-arrow-height 0 $tooltip-arrow-height $tooltip-arrow-height;
+  &.fp-inverse {
+    border-color: transparent transparent transparent $tooltip-inverse-background;
+  }
 }
 
 // tooptip on top
@@ -362,14 +382,7 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
 }
 
 .fp-tooltip-holder:hover {
-  .fp-tooltip-top,
-  .fp-tooltip-top-left,
-  .fp-tooltip-top-right,
-  .fp-tooltip-bottom,
-  .fp-tooltip-bottom-left,
-  .fp-tooltip-bottom-right,
-  .fp-tooltip-left,
-  .fp-tooltip-right {
+  %tooltip-base {
     display: inline-block;
   }
 }
