@@ -2,7 +2,6 @@
  * CSS Floatparts
  * https://github.com/nabeix/css-floatparts
  */
-/* animations */
 @keyframes animation-fade-in {
   from {
     opacity: 0;
@@ -64,9 +63,9 @@
   min-width: 300px;
   max-width: 90%;
   min-height: 50px;
+  z-index: 10000;
 }
 
-/* modal */
 .fp-modal {
   display: none;
   z-index: 9999;
@@ -119,7 +118,6 @@
   animation-fill-mode: forwards;
 }
 
-/* fp-show and fp-animation */
 .fp-show.fp-animation-none.fp-dialog, .fp-show.fp-animation-none.fp-modal > .content {
   animation-name: none;
 }
@@ -133,18 +131,143 @@
   animation-name: animation-slide-up;
 }
 
-/* tooltip */
-.fp-tooltip {
+.fp-tooltip-top, .fp-tooltip-top-left, .fp-tooltip-top-right, .fp-tooltip-bottom, .fp-tooltip-bottom-left, .fp-tooltip-bottom-right, .fp-tooltip-right, .fp-tooltip-left {
   display: none;
+  position: absolute;
   padding: 5px 8px;
   border-radius: 3px;
-  margin-left: 0px;
-  margin-top: -5px;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
+  top: 0px;
+  left: 0px;
 }
 
-.fp-tooltip-holder:hover .fp-tooltip {
-  display: inline;
+.fp-tooltip-top:before, .fp-tooltip-top-left:before, .fp-tooltip-top-right:before, .fp-tooltip-bottom:before, .fp-tooltip-bottom-left:before, .fp-tooltip-bottom-right:before, .fp-tooltip-right:before, .fp-tooltip-left:before {
+  content: "";
   position: absolute;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+}
+
+.fp-tooltip-top:before, .fp-tooltip-top-left:before, .fp-tooltip-top-right:before {
+  margin-left: -8px;
+  bottom: -8px;
+  border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+  border-width: 8px 8px 0 8px;
+}
+
+.fp-tooltip-bottom:before, .fp-tooltip-bottom-left:before, .fp-tooltip-bottom-right:before {
+  margin-left: -8px;
+  top: -8px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.9) transparent;
+  border-width: 0 8px 8px 8px;
+}
+
+.fp-tooltip-right:before {
+  left: -8px;
+  border-color: transparent rgba(0, 0, 0, 0.9) transparent transparent;
+  border-width: 8px 8px 8px 0;
+}
+
+.fp-tooltip-left:before {
+  right: -8px;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.9);
+  border-width: 8px 0 8px 8px;
+}
+
+.fp-tooltip-top {
+  transform: translate(-50%, -100%);
+  margin-top: -8px;
+  left: 50%;
+}
+
+.fp-tooltip-top-left {
+  transform: translateY(-100%);
+  margin-top: -8px;
+}
+
+.fp-tooltip-top-right {
+  transform: translate(-100%, -100%);
+  margin-top: -8px;
+  left: 100%;
+}
+
+.fp-tooltip-top:before {
+  left: 50%;
+}
+
+.fp-tooltip-top-left:before {
+  left: 16px;
+}
+
+.fp-tooltip-top-right:before {
+  right: 16px;
+}
+
+.fp-tooltip-bottom {
+  transform: translateX(-50%);
+  top: 100%;
+  left: 50%;
+  margin-top: 8px;
+}
+
+.fp-tooltip-bottom-left {
+  top: 100%;
+  margin-top: 8px;
+}
+
+.fp-tooltip-bottom-right {
+  transform: translateX(-100%);
+  top: 100%;
+  left: 100%;
+  margin-top: 8px;
+}
+
+.fp-tooltip-bottom:before {
+  left: 50%;
+}
+
+.fp-tooltip-bottom-left:before {
+  left: 16px;
+}
+
+.fp-tooltip-bottom-right:before {
+  right: 16px;
+}
+
+.fp-tooltip-right {
+  transform: translateY(-50%);
+  top: 50%;
+  left: 100%;
+  margin-left: 8px;
+}
+
+.fp-tooltip-right:before {
+  top: 8px;
+}
+
+.fp-tooltip-left {
+  transform: translate(-100%, -50%);
+  top: 50%;
+  left: -8px;
+}
+
+.fp-tooltip-left:before {
+  top: 8px;
+}
+
+.fp-tooltip-holder {
+  position: relative;
+}
+
+.fp-tooltip-holder:hover .fp-tooltip-top,
+.fp-tooltip-holder:hover .fp-tooltip-top-left,
+.fp-tooltip-holder:hover .fp-tooltip-top-right,
+.fp-tooltip-holder:hover .fp-tooltip-bottom,
+.fp-tooltip-holder:hover .fp-tooltip-bottom-left,
+.fp-tooltip-holder:hover .fp-tooltip-bottom-right,
+.fp-tooltip-holder:hover .fp-tooltip-left,
+.fp-tooltip-holder:hover .fp-tooltip-right {
+  display: inline-block;
 }
