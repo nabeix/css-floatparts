@@ -3,6 +3,14 @@
  * https://github.com/nabeix/css-floatparts
  */
 /* animations */
+@keyframes animation-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes animation-slide-down {
   from {
     opacity: 0;
@@ -68,6 +76,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
 }
 .fp-modal .content > .header,
 .fp-modal .content > .body,
@@ -81,6 +90,8 @@
 }
 .fp-modal.fp-show {
   display: block;
+  animation: animation-fade-in 0.3s ease 0s;
+  animation-fill-mode: forwards;
 }
 .fp-modal.fp-show .content {
   animation: animation-slide-down 0.4s ease 0s;
@@ -108,15 +119,32 @@
   animation-fill-mode: forwards;
 }
 
-.fp-show.fp-animation-none {
+/* fp-show and fp-animation */
+.fp-show.fp-animation-none.fp-dialog, .fp-show.fp-animation-none.fp-modal > .content {
   animation-name: none;
 }
-.fp-show.fp-animation-slide-left-in {
+.fp-show.fp-animation-slide-left-in.fp-dialog, .fp-show.fp-animation-slide-left-in.fp-modal > .content {
   animation-name: animation-slide-left-in;
 }
-.fp-show.fp-animation-slide-right-in {
+.fp-show.fp-animation-slide-right-in.fp-dialog, .fp-show.fp-animation-slide-right-in.fp-modal > .content {
   animation-name: animation-slide-right-in;
 }
-.fp-show.fp-animation-slide-up {
+.fp-show.fp-animation-slide-up.fp-dialog, .fp-show.fp-animation-slide-up.fp-modal > .content {
   animation-name: animation-slide-up;
+}
+
+/* tooltip */
+.fp-tooltip {
+  display: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  margin-left: 0px;
+  margin-top: -5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+
+.fp-tooltip-holder:hover .fp-tooltip {
+  display: inline;
+  position: absolute;
 }

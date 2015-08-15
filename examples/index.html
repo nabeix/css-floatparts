@@ -9,7 +9,7 @@
              background-color: #c2d4d8;
          }
          .example-text {
-             //width: 500px;
+             width: 1020x;
          }
          .text-center {
              text-align: center;
@@ -22,7 +22,7 @@
              var modalOpenBtn = document.getElementById("modal-open-btn");
              var modalCloseBtn = document.getElementById("modal-close-btn");
              modalOpenBtn.addEventListener("click", function() {
-                 modal.className += " fp-show";
+                 modal.className += " fp-show fp-animation-slide-left-in";
              });
              modalCloseBtn.addEventListener("click", function() {
                  modal.className  = "fp-modal";
@@ -33,7 +33,7 @@
              var dialogOpenBtn = document.getElementById("dialog-open-btn");
              var dialogCloseBtn = document.getElementById("dialog-close-btn");
              dialogOpenBtn.addEventListener("click", function() {
-                 dialog.className += " fp-show";
+                 dialog.className += " fp-show fp-animation-slide-up";
              });
              dialogCloseBtn.addEventListener("click", function() {
                  dialog.className  = "fp-dialog";
@@ -43,7 +43,7 @@
     </head>
     <body>
         <h1>CSS Floatparts examples</h1>
-        <div id="mymodal" class="fp-modal fp-animation-none">
+        <div id="mymodal" class="fp-modal">
             <div class="content">
                 <div class="header">
                     <h3>Modal</h3>
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div id="mydialog" class="fp-dialog fp-animation-none">
+        <div id="mydialog" class="fp-dialog">
             <div class="header">
                 <h3>Dialog</h3>
             </div>
@@ -76,6 +76,9 @@
         </div>
         <div>
             <input id="dialog-open-btn" type="button" value="open dialog">
+        </div>
+        <div>
+            <a href="#" class="fp-tooltip-holder">tooltip<span class="fp-tooltip">this is my tooltip.</span></a>
         </div>
     </body>
 </html>
