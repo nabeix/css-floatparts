@@ -20,6 +20,10 @@ $content-min-height: 50px;
 $modal-background-animation: animation-fade-in .3s ease .0s;
 $default-content-animation: animation-slide-down .4s ease .0s;
 
+$tooltip-padding-top-bottom: 5px;
+$tooltip-padding-left-right: 8px;
+$tooltip-padding: $tooltip-padding-top-bottom $tooltip-padding-left-right;
+$tooltip-offset-x: $tooltip-padding-left-right * 2;
 $tooltip-border-radius: 3px;
 $tooltip-arrow-height: 8px;
 $tooltip-background: rgba(0, 0, 0, 0.9);
@@ -205,7 +209,7 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
 %tooltip-base {
   display: none;
   position: absolute;
-  padding: $content-padding;
+  padding: $tooltip-padding;
   border-radius: $tooltip-border-radius;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
@@ -279,12 +283,12 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
 
 .fp-tooltip-top-left:before {
   @extend %tooltip-arrow-down;
-  left: 16px;;
+  left: $tooltip-offset-x;
 }
 
 .fp-tooltip-top-right:before {
   @extend %tooltip-arrow-down;
-  right: 16px;
+  right: $tooltip-offset-x;
 }
 
 // tooltip on bottom
@@ -317,12 +321,12 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
 
 .fp-tooltip-bottom-left:before {
   @extend %tooltip-arrow-up;
-  left: 16px;;
+  left: $tooltip-offset-x;
 }
 
 .fp-tooltip-bottom-right:before {
   @extend %tooltip-arrow-up;
-  right: 16px;
+  right: $tooltip-offset-x;
 }
 
 // tooltip on right
