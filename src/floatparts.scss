@@ -106,7 +106,7 @@ $tooltip-inverse-color: #000;
 
 // modal
 
-.fp-modal {
+.flp-modal {
   display: none;
   z-index: 9999;
   position: fixed;
@@ -135,13 +135,13 @@ $tooltip-inverse-color: #000;
     }
   }
 
-  &.fp-show {
+  &.flp-show {
     display: block;
     animation: $modal-background-animation;
     animation-fill-mode: forwards;
   }
 
-  &.fp-show .content {
+  &.flp-show .content {
     animation: $default-content-animation;
     animation-fill-mode: forwards;
   }
@@ -149,7 +149,7 @@ $tooltip-inverse-color: #000;
 
 /* dialog */
 
-.fp-dialog {
+.flp-dialog {
   @extend %content-base;
   display: none;
 
@@ -167,7 +167,7 @@ $tooltip-inverse-color: #000;
     }
   }
 
-  &.fp-show {
+  &.flp-show {
     display: block;
     opacity: 1;
     animation: $default-content-animation;
@@ -175,33 +175,33 @@ $tooltip-inverse-color: #000;
   }
 }
 
-// fp-show and fp-animation
+// flp-show and flp-animation
 
-.fp-show {
-  &.fp-animation-none {
-    &.fp-dialog,
-    &.fp-modal > .content {
+.flp-show {
+  &.flp-animation-none {
+    &.flp-dialog,
+    &.flp-modal > .content {
       animation-name: none;
     }
   }
 
-  &.fp-animation-slide-left-in {
-    &.fp-dialog,
-    &.fp-modal > .content {
+  &.flp-animation-slide-left-in {
+    &.flp-dialog,
+    &.flp-modal > .content {
       animation-name: animation-slide-left-in;
     }
   }
 
-  &.fp-animation-slide-right-in {
-    &.fp-dialog,
-    &.fp-modal > .content {
+  &.flp-animation-slide-right-in {
+    &.flp-dialog,
+    &.flp-modal > .content {
       animation-name: animation-slide-right-in;
     }
   }
 
-  &.fp-animation-slide-up {
-    &.fp-dialog,
-    &.fp-modal > .content {
+  &.flp-animation-slide-up {
+    &.flp-dialog,
+    &.flp-modal > .content {
       animation-name: animation-slide-up;
     }
   }
@@ -219,7 +219,7 @@ $tooltip-inverse-color: #000;
   top: 0px;
   left: 0px;
 
-  &.fp-inverse {
+  &.flp-inverse {
     background-color: $tooltip-inverse-background;
     color: $tooltip-inverse-color;
   }
@@ -239,7 +239,7 @@ $tooltip-inverse-color: #000;
   bottom: -$tooltip-arrow-height;
   border-color: $tooltip-background transparent transparent transparent;
   border-width: $tooltip-arrow-height $tooltip-arrow-height 0 $tooltip-arrow-height;
-  &.fp-inverse {
+  &.flp-inverse {
     border-color: $tooltip-inverse-background transparent transparent transparent;
   }
 }
@@ -250,7 +250,7 @@ $tooltip-inverse-color: #000;
   top: -$tooltip-arrow-height;
   border-color: transparent transparent $tooltip-background transparent;
   border-width: 0 $tooltip-arrow-height $tooltip-arrow-height $tooltip-arrow-height;
-  &.fp-inverse {
+  &.flp-inverse {
     border-color: transparent transparent $tooltip-inverse-background transparent;
   }
 }
@@ -260,7 +260,7 @@ $tooltip-inverse-color: #000;
   left: -$tooltip-arrow-height;
   border-color: transparent $tooltip-background transparent transparent;
   border-width: $tooltip-arrow-height $tooltip-arrow-height $tooltip-arrow-height 0;
-  &.fp-inverse {
+  &.flp-inverse {
     border-color: transparent $tooltip-inverse-background transparent transparent;
   }
 }
@@ -270,49 +270,49 @@ $tooltip-inverse-color: #000;
   right: -$tooltip-arrow-height;
   border-color: transparent transparent transparent $tooltip-background;
   border-width: $tooltip-arrow-height 0 $tooltip-arrow-height $tooltip-arrow-height;
-  &.fp-inverse {
+  &.flp-inverse {
     border-color: transparent transparent transparent $tooltip-inverse-background;
   }
 }
 
 // tooptip on top
-.fp-tooltip-top {
+.flp-tooltip-top {
   @extend %tooltip-base;
   transform: translate(-50%, -100%);
   margin-top: -$tooltip-arrow-height;
   left: 50%;
 }
 
-.fp-tooltip-top-left {
+.flp-tooltip-top-left {
   @extend %tooltip-base;
   transform: translateY(-100%);
   margin-top: -$tooltip-arrow-height;
 }
 
-.fp-tooltip-top-right {
+.flp-tooltip-top-right {
   @extend %tooltip-base;
   transform: translate(-100%, -100%);
   margin-top: -$tooltip-arrow-height;
   left: 100%;
 }
 
-.fp-tooltip-top:before {
+.flp-tooltip-top:before {
   @extend %tooltip-arrow-down;
   left: 50%;
 }
 
-.fp-tooltip-top-left:before {
+.flp-tooltip-top-left:before {
   @extend %tooltip-arrow-down;
   left: $tooltip-offset-x;
 }
 
-.fp-tooltip-top-right:before {
+.flp-tooltip-top-right:before {
   @extend %tooltip-arrow-down;
   right: $tooltip-offset-x;
 }
 
 // tooltip on bottom
-.fp-tooltip-bottom {
+.flp-tooltip-bottom {
   @extend %tooltip-base;
   transform: translateX(-50%);
   top: 100%;
@@ -320,13 +320,13 @@ $tooltip-inverse-color: #000;
   margin-top: $tooltip-arrow-height;
 }
 
-.fp-tooltip-bottom-left {
+.flp-tooltip-bottom-left {
   @extend %tooltip-base;
   top: 100%;
   margin-top: $tooltip-arrow-height;
 }
 
-.fp-tooltip-bottom-right {
+.flp-tooltip-bottom-right {
   @extend %tooltip-base;
   transform: translateX(-100%);
   top: 100%;
@@ -334,23 +334,23 @@ $tooltip-inverse-color: #000;
   margin-top: $tooltip-arrow-height;
 }
 
-.fp-tooltip-bottom:before {
+.flp-tooltip-bottom:before {
   @extend %tooltip-arrow-up;
   left: 50%;
 }
 
-.fp-tooltip-bottom-left:before {
+.flp-tooltip-bottom-left:before {
   @extend %tooltip-arrow-up;
   left: $tooltip-offset-x;
 }
 
-.fp-tooltip-bottom-right:before {
+.flp-tooltip-bottom-right:before {
   @extend %tooltip-arrow-up;
   right: $tooltip-offset-x;
 }
 
 // tooltip on right
-.fp-tooltip-right {
+.flp-tooltip-right {
   @extend %tooltip-base;
   transform: translateY(-50%);
   top: 50%;
@@ -358,30 +358,30 @@ $tooltip-inverse-color: #000;
   margin-left: $tooltip-arrow-height;
 }
 
-.fp-tooltip-right:before {
+.flp-tooltip-right:before {
   @extend %tooltip-arrow-left;
   top: $tooltip-arrow-height;
 }
 
 // tooltip on left
-.fp-tooltip-left {
+.flp-tooltip-left {
   @extend %tooltip-base;
   transform: translate(-100%, -50%);
   top: 50%;
   left: -$tooltip-arrow-height;
 }
 
-.fp-tooltip-left:before {
+.flp-tooltip-left:before {
   @extend %tooltip-arrow-right;
   top: $tooltip-arrow-height;
 }
 
 // tooltip holder
-.fp-tooltip-holder {
+.flp-tooltip-holder {
   position:relative;
 }
 
-.fp-tooltip-holder:hover {
+.flp-tooltip-holder:hover {
   %tooltip-base {
     display: inline-block;
   }

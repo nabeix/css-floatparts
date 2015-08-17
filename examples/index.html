@@ -26,10 +26,10 @@
              var modalOpenBtn = document.getElementById("modal-open-btn");
              var modalCloseBtn = document.getElementById("modal-close-btn");
              modalOpenBtn.addEventListener("click", function() {
-                 modal.className += " fp-show fp-animation-slide-left-in";
+                 modal.className += " flp-show flp-animation-slide-left-in";
              });
              modalCloseBtn.addEventListener("click", function() {
-                 modal.className  = "fp-modal";
+                 modal.className  = "flp-modal";
              });
 
              // dialog
@@ -37,17 +37,17 @@
              var dialogOpenBtn = document.getElementById("dialog-open-btn");
              var dialogCloseBtn = document.getElementById("dialog-close-btn");
              dialogOpenBtn.addEventListener("click", function() {
-                 dialog.className += " fp-show fp-animation-slide-up";
+                 dialog.className += " flp-show flp-animation-slide-up";
              });
              dialogCloseBtn.addEventListener("click", function() {
-                 dialog.className  = "fp-dialog";
+                 dialog.className  = "flp-dialog";
              });
          };
         </script>
     </head>
     <body>
         <h1>CSS Floatparts examples</h1>
-        <div id="mymodal" class="fp-modal">
+        <div id="mymodal" class="flp-modal">
             <div class="content">
                 <div class="header">
                     <h3>Modal</h3>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div id="mydialog" class="fp-dialog">
+        <div id="mydialog" class="flp-dialog">
             <div class="header">
                 <h3>Dialog</h3>
             </div>
@@ -82,15 +82,15 @@
             <input id="dialog-open-btn" type="button" value="open dialog">
         </div>
         <div style="margin-left: 300px;">
-            <div id="tooltip-test" class="fp-tooltip-holder" style="background-color: red; font-size: 40px; width: 500px;">tooltip
-                <span class="fp-tooltip-right">right</span>
-                <span class="fp-tooltip-top">top</span>
-                <span class="fp-tooltip-top-left">top-left</span>
-                <span class="fp-tooltip-top-right">top-right</span>
-                <span class="fp-tooltip-bottom">bottom</span>
-                <span class="fp-tooltip-bottom-left">bottom-left</span>
-                <span class="fp-tooltip-bottom-right fp-inverse">bottom-right</span>
-                <span class="fp-tooltip-left">left</span>
+            <div id="tooltip-test" class="flp-tooltip-holder" style="background-color: red; font-size: 40px; width: 500px;">tooltip
+                <span class="flp-tooltip-right">right</span>
+                <span class="flp-tooltip-top">top</span>
+                <span class="flp-tooltip-top-left">top-left</span>
+                <span class="flp-tooltip-top-right">top-right</span>
+                <span class="flp-tooltip-bottom">bottom</span>
+                <span class="flp-tooltip-bottom-left">bottom-left</span>
+                <span class="flp-tooltip-bottom-right flp-inverse">bottom-right</span>
+                <span class="flp-tooltip-left">left</span>
             </div>
         </div>
     </body>
