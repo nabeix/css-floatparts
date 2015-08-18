@@ -129,6 +129,9 @@
 .flp-show.flp-animation-slide-up.flp-dialog, .flp-show.flp-animation-slide-up.flp-modal > .content {
   animation-name: animation-slide-up;
 }
+.flp-show.flp-animation-slide-down.flp-dialog, .flp-show.flp-animation-slide-down.flp-modal > .content {
+  animation-name: animation-slide-down;
+}
 
 .flp-tooltip-top, .flp-tooltip-top-left, .flp-tooltip-top-right, .flp-tooltip-bottom, .flp-tooltip-bottom-left, .flp-tooltip-bottom-right, .flp-tooltip-right, .flp-tooltip-left {
   display: none;

@@ -207,6 +207,13 @@ $tooltip-inverse-color: #000;
       animation-name: animation-slide-up;
     }
   }
+
+  &.flp-animation-slide-down {
+    &.flp-dialog,
+    &.flp-modal > .content {
+      animation-name: animation-slide-down;
+    }
+  }
 }
 
 // tooltip

@@ -19,35 +19,41 @@
              font-size: 16px;
          }
         </style>
+        <script src="./jquery-2.1.4.min.js"></script>
         <script>
-         window.onload = function() {
-             // modal
-             var modal = document.getElementById("mymodal");
-             var modalOpenBtn = document.getElementById("modal-open-btn");
-             var modalCloseBtn = document.getElementById("modal-close-btn");
-             modalOpenBtn.addEventListener("click", function() {
-                 modal.className += " flp-show flp-animation-slide-left-in";
-             });
-             modalCloseBtn.addEventListener("click", function() {
-                 modal.className  = "flp-modal";
-             });
+             $(function() {
+                 // modal
+                 var modalOpenBtn = document.getElementById("");
+                 var modalCloseBtn = document.getElementById("modal-close-btn");
+                 $("#modal-open-btn").bind("click", function() {
+                     var modal = $("#my-modal");
+                     modal.removeClass(function(index, className) {
+                         return (className.match(/\bflp-animation\S+/g) || []).join(" ");
+                     });
+                     var animation = "flp-animation-" + $("input[name=modal-animation]:checked").val();
+                     modal.addClass(animation);
+                     modal.addClass("flp-show");
+                 });
+                 $("#modal-close-btn").bind("click", function() {
+                     $("#my-modal").removeClass("flp-show");
+                 });
 
-             // dialog
-             var dialog = document.getElementById("mydialog");
-             var dialogOpenBtn = document.getElementById("dialog-open-btn");
-             var dialogCloseBtn = document.getElementById("dialog-close-btn");
-             dialogOpenBtn.addEventListener("click", function() {
-                 dialog.className += " flp-show flp-animation-slide-up";
+                 // dialog
+                 var dialog = document.getElementById("mydialog");
+                 var dialogOpenBtn = document.getElementById("dialog-open-btn");
+                 var dialogCloseBtn = document.getElementById("dialog-close-btn");
+                 dialogOpenBtn.addEventListener("click", function() {
+                     dialog.className += " flp-show flp-animation-slide-up";
+                 });
+                 dialogCloseBtn.addEventListener("click", function() {
+                     dialog.className  = "flp-dialog";
+                 });
              });
-             dialogCloseBtn.addEventListener("click", function() {
-                 dialog.className  = "flp-dialog";
-             });
-         };
         </script>
     </head>
     <body>
         <h1>CSS Floatparts examples</h1>
-        <div id="mymodal" class="flp-modal">
+        <div id="my-modal" class="flp-modal">
             <div class="content">
                 <div class="header">
                     <h3>Modal</h3>
@@ -77,6 +83,11 @@
         </div>
         <div>
             <input id="modal-open-btn" type="button" value="open modal">
+            <label><input type="radio" name="modal-animation" value="slide-down" checked>slide-down(default)</label>
+            <label><input type="radio" name="modal-animation" value="slide-up">slide-up</label>
+            <label><input type="radio" name="modal-animation" value="slide-left-in">slide-left-in</label>
+            <label><input type="radio" name="modal-animation" value="slide-right-in">slide-right-in</label>
+            <label><input type="radio" name="modal-animation" value="none">none</label>
         </div>
         <div>
             <input id="dialog-open-btn" type="button" value="open dialog">
