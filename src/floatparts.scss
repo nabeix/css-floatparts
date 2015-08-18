@@ -278,6 +278,7 @@ $tooltip-inverse-color: #000;
 }
 
 // - tooptip on top
+
 .flp-tooltip-top {
   @extend %tooltip-base;
   transform: translate(-50%, -100%);
@@ -314,6 +315,7 @@ $tooltip-inverse-color: #000;
 }
 
 // - tooltip on bottom
+
 .flp-tooltip-bottom {
   @extend %tooltip-base;
   transform: translateX(-50%);
@@ -352,6 +354,7 @@ $tooltip-inverse-color: #000;
 }
 
 // - tooltip on right
+
 .flp-tooltip-right {
   @extend %tooltip-base;
   transform: translateY(-50%);
@@ -366,6 +369,7 @@ $tooltip-inverse-color: #000;
 }
 
 // - tooltip on left
+
 .flp-tooltip-left {
   @extend %tooltip-base;
   transform: translate(-100%, -50%);
@@ -379,6 +383,7 @@ $tooltip-inverse-color: #000;
 }
 
 // - tooltip holder
+
 .flp-tooltip-holder {
   position:relative;
 }
