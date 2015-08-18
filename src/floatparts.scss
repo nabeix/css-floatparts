@@ -3,7 +3,7 @@
  * https://github.com/nabeix/css-floatparts
  */
 
-// variables
+// common variables
 
 $modal-bg: rgba(0, 0, 0, .5);
 
@@ -31,7 +31,9 @@ $tooltip-color: #fff;
 $tooltip-inverse-background: rgba(255, 255, 255, 0.9);
 $tooltip-inverse-color: #000;
 
-// animations
+// modal and dialog
+
+// - animations
 
 @keyframes animation-fade-in {
   from {
@@ -86,7 +88,7 @@ $tooltip-inverse-color: #000;
   }
 }
 
-// placeholder
+// - placeholder
 
 %content-base {
   position: absolute;
@@ -104,7 +106,7 @@ $tooltip-inverse-color: #000;
   z-index: 10000;
 }
 
-// modal
+// - modal
 
 .flp-modal {
   display: none;
@@ -147,7 +149,7 @@ $tooltip-inverse-color: #000;
   }
 }
 
-/* dialog */
+// - dialog
 
 .flp-dialog {
   @extend %content-base;
@@ -175,7 +177,7 @@ $tooltip-inverse-color: #000;
   }
 }
 
-// flp-show and flp-animation
+// - flp-show and flp-animation
 
 .flp-show {
   &.flp-animation-none {
@@ -275,7 +277,7 @@ $tooltip-inverse-color: #000;
   }
 }
 
-// tooptip on top
+// - tooptip on top
 .flp-tooltip-top {
   @extend %tooltip-base;
   transform: translate(-50%, -100%);
@@ -311,7 +313,7 @@ $tooltip-inverse-color: #000;
   right: $tooltip-offset-x;
 }
 
-// tooltip on bottom
+// - tooltip on bottom
 .flp-tooltip-bottom {
   @extend %tooltip-base;
   transform: translateX(-50%);
@@ -349,7 +351,7 @@ $tooltip-inverse-color: #000;
   right: $tooltip-offset-x;
 }
 
-// tooltip on right
+// - tooltip on right
 .flp-tooltip-right {
   @extend %tooltip-base;
   transform: translateY(-50%);
@@ -363,7 +365,7 @@ $tooltip-inverse-color: #000;
   top: $tooltip-arrow-height;
 }
 
-// tooltip on left
+// - tooltip on left
 .flp-tooltip-left {
   @extend %tooltip-base;
   transform: translate(-100%, -50%);
@@ -376,13 +378,19 @@ $tooltip-inverse-color: #000;
   top: $tooltip-arrow-height;
 }
 
-// tooltip holder
+// - tooltip holder
 .flp-tooltip-holder {
   position:relative;
 }
 
 .flp-tooltip-holder:hover {
-  %tooltip-base {
+  %tooltip-base.flp-enable-hover {
+    display: inline-block;
+  }
+}
+
+.flp-tooltip-holder {
+  %tooltip-base.flp-show {
     display: inline-block;
   }
 }

@@ -97,7 +97,6 @@
   animation-fill-mode: forwards;
 }
 
-/* dialog */
 .flp-dialog {
   display: none;
 }
@@ -277,6 +276,10 @@
   position: relative;
 }
 
-.flp-tooltip-holder:hover .flp-tooltip-top, .flp-tooltip-holder:hover .flp-tooltip-top-left, .flp-tooltip-holder:hover .flp-tooltip-top-right, .flp-tooltip-holder:hover .flp-tooltip-bottom, .flp-tooltip-holder:hover .flp-tooltip-bottom-left, .flp-tooltip-holder:hover .flp-tooltip-bottom-right, .flp-tooltip-holder:hover .flp-tooltip-right, .flp-tooltip-holder:hover .flp-tooltip-left {
+.flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-top, .flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-top-left, .flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-top-right, .flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-bottom, .flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-bottom-left, .flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-bottom-right, .flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-right, .flp-tooltip-holder:hover .flp-enable-hover.flp-tooltip-left {
+  display: inline-block;
+}
+
+.flp-tooltip-holder .flp-show.flp-tooltip-top, .flp-tooltip-holder .flp-show.flp-tooltip-top-left, .flp-tooltip-holder .flp-show.flp-tooltip-top-right, .flp-tooltip-holder .flp-show.flp-tooltip-bottom, .flp-tooltip-holder .flp-show.flp-tooltip-bottom-left, .flp-tooltip-holder .flp-show.flp-tooltip-bottom-right, .flp-tooltip-holder .flp-show.flp-tooltip-right, .flp-tooltip-holder .flp-show.flp-tooltip-left {
   display: inline-block;
 }
