@@ -25,11 +25,18 @@
                  // modal
                  var modalOpenBtn = document.getElementById("");
                  var modalCloseBtn = document.getElementById("modal-close-btn");
-                 $("#modal-open-btn").bind("click", function() {
-                     var modal = $("#my-modal");
-                     modal.removeClass(function(index, className) {
+
+
+                 var removeAnimationClass = function(elm) {
+                     elm.removeClass(function(index, className) {
                          return (className.match(/\bflp-animation\S+/g) || []).join(" ");
                      });
+                 };
+
+                 // modal
+                 $("#modal-open-btn").bind("click", function() {
+                     var modal = $("#my-modal");
+                     removeAnimationClass(modal);
                      var animation = "flp-animation-" + $("input[name=modal-animation]:checked").val();
                      modal.addClass(animation);
                      modal.addClass("flp-show");
@@ -39,14 +46,15 @@
                  });
 
                  // dialog
-                 var dialog = document.getElementById("mydialog");
-                 var dialogOpenBtn = document.getElementById("dialog-open-btn");
-                 var dialogCloseBtn = document.getElementById("dialog-close-btn");
-                 dialogOpenBtn.addEventListener("click", function() {
-                     dialog.className += " flp-show flp-animation-slide-up";
+                 $("#dialog-open-btn").bind("click", function() {
+                     var dialog = $("#my-dialog");
+                     removeAnimationClass(dialog);
+                     var animation = "flp-animation-" + $("input[name=modal-animation]:checked").val();
+                     dialog.addClass(animation);
+                     dialog.addClass("flp-show");
                  });
-                 dialogCloseBtn.addEventListener("click", function() {
-                     dialog.className  = "flp-dialog";
+                 $("#dialog-close-btn").bind("click", function() {
+                     $("#my-dialog").removeClass("flp-show");
                  });
              });
         </script>
@@ -68,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div id="mydialog" class="flp-dialog">
+        <div id="my-dialog" class="flp-dialog">
             <div class="header">
                 <h3>Dialog</h3>
             </div>
@@ -91,6 +99,11 @@
         </div>
         <div>
             <input id="dialog-open-btn" type="button" value="open dialog">
+            <label><input type="radio" name="dialog-animation" value="slide-down" checked>slide-down(default)</label>
+            <label><input type="radio" name="dialog-animation" value="slide-up">slide-up</label>
+            <label><input type="radio" name="dialog-animation" value="slide-left-in">slide-left-in</label>
+            <label><input type="radio" name="dialog-animation" value="slide-right-in">slide-right-in</label>
+            <label><input type="radio" name="dialog-animation" value="none">none</label>
         </div>
         <div style="margin-left: 300px;">
             <div id="tooltip-test" class="flp-tooltip-holder" style="background-color: red; font-size: 40px; width: 500px;">tooltip
