@@ -1,5 +1,9 @@
-# CSS Floatparts
+# CSS Floatparts [![Build Status](https://travis-ci.org/nabeix/css-floatparts.svg?branch=master)](https://travis-ci.org/nabeix/css-floatparts)
 
-A set of Modal, Dialog and Tooltip using only CSS3.
+A set of modal, dialog and tooltip using only CSS3.
 
 ## WIP.
+
+## Install
+
+## Usage
