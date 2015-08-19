@@ -95,6 +95,7 @@
 .flp-modal.flp-show .content {
   animation: animation-slide-down 0.4s ease 0s;
   animation-fill-mode: forwards;
+  opacity: 1;
 }
 
 .flp-dialog {
@@ -136,10 +137,12 @@
 .flp-tooltip-top, .flp-tooltip-top-left, .flp-tooltip-top-right, .flp-tooltip-bottom, .flp-tooltip-bottom-left, .flp-tooltip-bottom-right, .flp-tooltip-right, .flp-tooltip-left {
   display: none;
   position: absolute;
-  padding: 5px 8px;
+  padding: 3px 5px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
+  font-size: 16px;
+  z-index: 9998;
   top: 0px;
   left: 0px;
 }

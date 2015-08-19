@@ -8,15 +8,11 @@
          body {
              background-color: #c2d4d8;
          }
-         .example-text {
-             width: 1020x;
-         }
          .text-center {
              text-align: center;
          }
          #tooltip-test span {
-             //width: 100px;
-             font-size: 16px;
+             //font-size: 16px;
          }
         </style>
         <script src="./jquery-2.1.4.min.js"></script>
@@ -105,20 +101,37 @@
             <label><input type="radio" name="dialog-animation" value="slide-right-in">slide-right-in</label>
             <label><input type="radio" name="dialog-animation" value="none">none</label>
         </div>
-        <div style="margin-left: 300px;">
-            <div id="tooltip-test" class="flp-tooltip-holder" style="background-color: red; font-size: 40px; width: 500px;">tooltip
-                <span class="flp-tooltip-right flp-show">right</span>
-                <span class="flp-tooltip-top flp-enable-hover flp-inverse">top</span>
-                <span class="flp-tooltip-top-left flp-enable-hover">top-left</span>
-                <span class="flp-tooltip-top-right flp-enable-hover">top-right</span>
-                <span class="flp-tooltip-bottom flp-enable-hover">bottom</span>
-                <span class="flp-tooltip-bottom-left flp-enable-hover">bottom-left</span>
-                <span class="flp-tooltip-bottom-right flp-inverse flp-enable-hover">bottom-right</span>
-                <span class="flp-tooltip-left">left</span>
-            </div>
-            <div style="background-color: green; font-size: 40px; width: 700px; z-index:9999;">
-                under tooltip
-            </div>
+        <div id="my-tooltip">
+        </div>
+        <div class="flp-tooltip-holder" style="margin-left: 100px; background-color: red; font-size: 40px; width: 500px; text-align: center;">tooltip with hover
+            <span class="flp-tooltip-right flp-enable-hover">right</span>
+            <span class="flp-tooltip-top flp-enable-hover">top</span>
+            <span class="flp-tooltip-top-left flp-enable-hover">top-left</span>
+            <span class="flp-tooltip-top-right flp-enable-hover">top-right</span>
+            <span class="flp-tooltip-bottom flp-enable-hover">bottom</span>
+            <span class="flp-tooltip-bottom-left flp-enable-hover">bottom-left</span>
+            <span class="flp-tooltip-bottom-right flp-enable-hover">bottom-right</span>
+            <span class="flp-tooltip-left flp-enable-hover">left</span>
+        </div>
+        <div class="flp-tooltip-holder" style="margin-left: 150px; background-color: green; font-size: 40px; width: 500px; text-align: center;">tooltip
+            <span class="flp-tooltip-right flp-show">right</span>
+            <span class="flp-tooltip-top flp-show">top</span>
+            <span class="flp-tooltip-top-left flp-show">top-left</span>
+            <span class="flp-tooltip-top-right flp-show">top-right</span>
+            <span class="flp-tooltip-bottom flp-show">bottom</span>
+            <span class="flp-tooltip-bottom-left flp-show">bottom-left</span>
+            <span class="flp-tooltip-bottom-right flp-show">bottom-right</span>
+            <span class="flp-tooltip-left flp-show">left</span>
+        </div>
+        <div class="flp-tooltip-holder" style="margin-left: 200px; background-color: blue; font-size: 40px; width: 500px; text-align: center;">tooltip
+            <span class="flp-tooltip-right flp-inverse flp-show">right</span>
+            <span class="flp-tooltip-top flp-inverse flp-show">top</span>
+            <span class="flp-tooltip-top-left flp-inverse flp-show">top-left</span>
+            <span class="flp-tooltip-top-right flp-inverse flp-show">top-right</span>
+            <span class="flp-tooltip-bottom flp-inverse flp-show">bottom</span>
+            <span class="flp-tooltip-bottom-left flp-inverse flp-show">bottom-left</span>
+            <span class="flp-tooltip-bottom-right flp-inverse flp-show">bottom-right</span>
+            <span class="flp-tooltip-left flp-inverse flp-show">left</span>
         </div>
     </body>
 </html>

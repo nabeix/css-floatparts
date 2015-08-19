@@ -22,7 +22,7 @@ $default-content-animation: animation-slide-down .4s ease .0s;
 
 $tooltip-padding-top-bottom: 5px;
 $tooltip-padding-left-right: 8px;
-$tooltip-padding: $tooltip-padding-top-bottom $tooltip-padding-left-right;
+$tooltip-padding: 3px 5px;
 $tooltip-offset-x: $tooltip-padding-left-right * 2;
 $tooltip-border-radius: 3px;
 $tooltip-arrow-height: 8px;
@@ -30,6 +30,7 @@ $tooltip-background: rgba(0, 0, 0, 0.9);
 $tooltip-color: #fff;
 $tooltip-inverse-background: rgba(255, 255, 255, 0.9);
 $tooltip-inverse-color: #000;
+$tooltip-font-size: 16px;
 
 // modal and dialog
 
@@ -146,6 +147,7 @@ $tooltip-inverse-color: #000;
   &.flp-show .content {
     animation: $default-content-animation;
     animation-fill-mode: forwards;
+    opacity: 1;
   }
 }
 
@@ -225,6 +227,8 @@ $tooltip-inverse-color: #000;
   border-radius: $tooltip-border-radius;
   background-color: $tooltip-background;
   color: $tooltip-color;
+  font-size: 16px;
+  z-index: 9998;
   top: 0px;
   left: 0px;
 
