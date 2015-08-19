@@ -49,7 +49,7 @@
                  $("#dialog-open-btn").bind("click", function() {
                      var dialog = $("#my-dialog");
                      removeAnimationClass(dialog);
-                     var animation = "flp-animation-" + $("input[name=modal-animation]:checked").val();
+                     var animation = "flp-animation-" + $("input[name=dialog-animation]:checked").val();
                      dialog.addClass(animation);
                      dialog.addClass("flp-show");
                  });
