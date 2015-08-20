@@ -6,4 +6,14 @@ A set of modal, dialog and tooltip using only CSS3.
 
 ## Install
 
+
 ## Usage
+
+TODO:
+
+## Development
+
+```
+npm install
+gulp
+```
