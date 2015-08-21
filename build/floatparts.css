@@ -2,51 +2,119 @@
  * CSS Floatparts
  * https://github.com/nabeix/css-floatparts
  */
-@keyframes animation-fade-in {
+@-webkit-keyframes animation-fade-in {
   from {
     opacity: 0;
+    filter: alpha(opacity=0);
   }
   to {
     opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@keyframes animation-fade-in {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@-webkit-keyframes animation-slide-down {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    top: -20%;
+  }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    top: 20%;
   }
 }
 @keyframes animation-slide-down {
   from {
     opacity: 0;
+    filter: alpha(opacity=0);
     top: -20%;
   }
   to {
     opacity: 1;
+    filter: alpha(opacity=100);
+    top: 20%;
+  }
+}
+@-webkit-keyframes animation-slide-up {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    top: 120%;
+  }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
     top: 20%;
   }
 }
 @keyframes animation-slide-up {
   from {
     opacity: 0;
+    filter: alpha(opacity=0);
     top: 120%;
   }
   to {
     opacity: 1;
+    filter: alpha(opacity=100);
     top: 20%;
+  }
+}
+@-webkit-keyframes animation-slide-left-in {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: -20%;
+  }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 50%;
   }
 }
 @keyframes animation-slide-left-in {
   from {
     opacity: 0;
+    filter: alpha(opacity=0);
     left: -20%;
   }
   to {
     opacity: 1;
+    filter: alpha(opacity=100);
+    left: 50%;
+  }
+}
+@-webkit-keyframes animation-slide-right-in {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: 120%;
+  }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
     left: 50%;
   }
 }
 @keyframes animation-slide-right-in {
   from {
     opacity: 0;
+    filter: alpha(opacity=0);
     left: 120%;
   }
   to {
     opacity: 1;
+    filter: alpha(opacity=100);
     left: 50%;
   }
 }
@@ -55,11 +123,14 @@
   background-color: #fff;
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.3), 0px 10px 25px 0px rgba(0, 0, 0, 0.25);
   opacity: 0;
+  filter: alpha(opacity=0);
   width: 50%;
   height: auto;
   left: 50%;
   top: 20%;
-  transform: translate(-50%, -20%);
+  -webkit-transform: translate(-50%, -20%);
+      -ms-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
   min-width: 300px;
   max-width: 90%;
   min-height: 50px;
@@ -76,6 +147,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
+  filter: alpha(opacity=0);
 }
 .flp-modal .content > .header,
 .flp-modal .content > .body,
@@ -89,13 +161,18 @@
 }
 .flp-modal.flp-show {
   display: block;
-  animation: animation-fade-in 0.3s ease 0s;
-  animation-fill-mode: forwards;
+  -webkit-animation: animation-fade-in 0.3s ease 0s;
+          animation: animation-fade-in 0.3s ease 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .flp-modal.flp-show .content {
-  animation: animation-slide-down 0.4s ease 0s;
-  animation-fill-mode: forwards;
+  -webkit-animation: animation-slide-down 0.4s ease 0s;
+          animation: animation-slide-down 0.4s ease 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 1;
+  filter: alpha(opacity=100);
 }
 
 .flp-dialog {
@@ -114,24 +191,32 @@
 .flp-dialog.flp-show {
   display: block;
   opacity: 1;
-  animation: animation-slide-down 0.4s ease 0s;
-  animation-fill-mode: forwards;
+  filter: alpha(opacity=100);
+  -webkit-animation: animation-slide-down 0.4s ease 0s;
+          animation: animation-slide-down 0.4s ease 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .flp-show.flp-animation-none.flp-dialog, .flp-show.flp-animation-none.flp-modal > .content {
-  animation-name: none;
+  -webkit-animation-name: none;
+          animation-name: none;
 }
 .flp-show.flp-animation-slide-left-in.flp-dialog, .flp-show.flp-animation-slide-left-in.flp-modal > .content {
-  animation-name: animation-slide-left-in;
+  -webkit-animation-name: animation-slide-left-in;
+          animation-name: animation-slide-left-in;
 }
 .flp-show.flp-animation-slide-right-in.flp-dialog, .flp-show.flp-animation-slide-right-in.flp-modal > .content {
-  animation-name: animation-slide-right-in;
+  -webkit-animation-name: animation-slide-right-in;
+          animation-name: animation-slide-right-in;
 }
 .flp-show.flp-animation-slide-up.flp-dialog, .flp-show.flp-animation-slide-up.flp-modal > .content {
-  animation-name: animation-slide-up;
+  -webkit-animation-name: animation-slide-up;
+          animation-name: animation-slide-up;
 }
 .flp-show.flp-animation-slide-down.flp-dialog, .flp-show.flp-animation-slide-down.flp-modal > .content {
-  animation-name: animation-slide-down;
+  -webkit-animation-name: animation-slide-down;
+          animation-name: animation-slide-down;
 }
 
 .flp-tooltip-top, .flp-tooltip-top-left, .flp-tooltip-top-right, .flp-tooltip-bottom, .flp-tooltip-bottom-left, .flp-tooltip-bottom-right, .flp-tooltip-right, .flp-tooltip-left {
@@ -198,18 +283,24 @@
 }
 
 .flp-tooltip-top {
-  transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
   margin-top: -8px;
   left: 50%;
 }
 
 .flp-tooltip-top-left {
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
   margin-top: -8px;
 }
 
 .flp-tooltip-top-right {
-  transform: translate(-100%, -100%);
+  -webkit-transform: translate(-100%, -100%);
+      -ms-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
   margin-top: -8px;
   left: 100%;
 }
@@ -227,7 +318,9 @@
 }
 
 .flp-tooltip-bottom {
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: 100%;
   left: 50%;
   margin-top: 8px;
@@ -239,7 +332,9 @@
 }
 
 .flp-tooltip-bottom-right {
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   top: 100%;
   left: 100%;
   margin-top: 8px;
@@ -258,7 +353,9 @@
 }
 
 .flp-tooltip-right {
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   top: 50%;
   left: 100%;
   margin-left: 8px;
@@ -269,7 +366,9 @@
 }
 
 .flp-tooltip-left {
-  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+      -ms-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
   top: 50%;
   left: -8px;
 }
