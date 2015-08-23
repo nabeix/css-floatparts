@@ -362,7 +362,10 @@
 }
 
 .flp-tooltip-right:before {
-  top: 8px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
 }
 
 .flp-tooltip-left {
@@ -374,7 +377,10 @@
 }
 
 .flp-tooltip-left:before {
-  top: 8px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
 }
 
 .flp-tooltip-holder {

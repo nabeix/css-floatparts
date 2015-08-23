@@ -376,7 +376,8 @@ $tooltip-font-size: 16px;
 
 .flp-tooltip-right:before {
   @extend %tooltip-arrow-left;
-  top: $tooltip-arrow-height;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 // - tooltip on left
@@ -390,7 +391,8 @@ $tooltip-font-size: 16px;
 
 .flp-tooltip-left:before {
   @extend %tooltip-arrow-right;
-  top: $tooltip-arrow-height;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 // - tooltip holder
