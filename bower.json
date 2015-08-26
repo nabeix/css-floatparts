@@ -1,0 +1,11 @@
+{
+  "name": "css-floatparts",
+  "version": "0.1.0",
+  "homepage": "https://github.com/nabeix/css-floatparts",
+  "authors": [
+    "Yusuke Watanabe <yusukew052@gmail.com>"
+  ],
+  "description": "A set of modal, dialog and tooltip using only CSS3.",
+  "main": "build/*.css",
+  "license": "MIT"
+}
