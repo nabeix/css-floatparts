@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "homepage": "https://github.com/nabeix/css-floatparts",
   "authors": [
-    "Yusuke Watanabe <yusukew052@gmail.com>"
+    "Yusuke Watanabe"
   ],
   "description": "A set of modal, dialog and tooltip using only CSS3.",
   "main": "build/*.css",
-  "license": "MIT"
+  "license": "MIT",
+  "ignore": [
+    "/.*",
+    "examples",
+    "gulpfile.js",
+    "package.json",
+    "src"
+  ]
 }

@@ -4,15 +4,13 @@ A set of modal, dialog and tooltip using only CSS3.
 
 ## Install
 
-Get floatparts.css or floatparts.min.css from [here](https://github.com/nabeix/css-floatparts/tree/master/build) or bower.
+Get floatparts.css and floatparts.min.css from [here](https://github.com/nabeix/css-floatparts/tree/master/build) or bower.
 
 ```
 <link rel="stylesheet" href="/path/to/floatparts.css">
 ```
 
 ### bower
-
-TODO:
 
 ```
 bower install css-floatparts
@@ -72,7 +70,7 @@ Initially, the dialog is hidden. To show the dialog, add the `.flp-show` class.
 A tooltip is created by adding the tooltip base class(e.g. `.flp-tooltip-top`) to any `<span>` or `<div>` element.
 And should add the `.tooltip-holder` class to the element has the tooltip.
 
-```
+```html
 <div class="flp-tooltip-holder">
     tooltip example
     <span class="flp-tooltip-right flp-enable-hover">tooltip here</span>
@@ -83,6 +81,22 @@ As default, show the tooltip by adding the `.flp-show` class to the tooltip base
 Instead of the `.flp-show` class, the `.flp-enable-hover` class elables the tooltip to show automatically by mouse hover.
 
 ### Animations
+
+The `.flp-modal` class and the `.flp-dialog` class supports the following animation classes.
+
+* `.flp-animation-slide-down` (default)
+* `.flp-animation-slide-up`
+* `.flp-animation-slide-left-in`
+* `.flp-animation-slide-right-in`
+
+```html
+<div class="flp-dialog flp-animation-slide-left-in">
+    ...
+</div>
+
+```
+
+To disable default animation, add the `.flp-animation-none` class.
 
 ## Development
 
