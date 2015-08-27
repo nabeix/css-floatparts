@@ -22,9 +22,9 @@ bower install css-floatparts
 
 ### Modal
 
-A basic modal is created by adding the `.flp-modal` class to the `<div>`.
+A modal is created by adding the `.flp-modal` class to any `<div>` element.
+The content of the modal should be in the `.flp-modal.content`.
 Initially, the modal is hidden. To show the modal, add the `.flp-show` class.
-
 
 ```html
 <div class="flp-modal flp-show">
@@ -43,19 +43,50 @@ Initially, the modal is hidden. To show the modal, add the `.flp-show` class.
 
 ```
 
+`.header`, `.body` and `.footer` are optional.
+
 ### Dialog
 
-TODO:
+A dialog is created by adding the `.flp-dialog` class to any `<div>` element.
+Initially, the dialog is hidden. To show the dialog, add the `.flp-show` class.
+
+```html
+<div class="flp-dialog flp-show">
+    <div class="header">
+        <h3>Modal header</h3>
+    </div>
+    <div class="body">
+        Modal body
+    </div>
+    <div class="footer">
+        Modal footer
+    </div>
+</div>
+
+```
+
+`.header`, `.body` and `.footer` are optional.
 
 ### Tooltip
 
-TODO:
+A tooltip is created by adding the tooltip base class(e.g. `.flp-tooltip-top`) to any `<span>` or `<div>` element.
+And should add the `.tooltip-holder` class to the element has the tooltip.
+
+```
+<div class="flp-tooltip-holder">
+    tooltip example
+    <span class="flp-tooltip-right flp-enable-hover">tooltip here</span>
+</div>
+```
+
+As default, show the tooltip by adding the `.flp-show` class to the tooltip base class.
+Instead of the `.flp-show` class, the `.flp-enable-hover` class elables the tooltip to show automatically by mouse hover.
+
+### Animations
 
 ## Development
 
-### Building
-
-We use Node.js, Gulp and sass to build CSS Floatparts.
+We use Node.js, Gulp and Sass to build CSS Floatparts.
 
 ```
 $ git clone git@github.com:nabeix/css-floatparts.git
