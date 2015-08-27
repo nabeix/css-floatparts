@@ -13,7 +13,7 @@ Get floatparts.css and floatparts.min.css from [here](https://github.com/nabeix/
 ### bower
 
 ```
-bower install floatparts
+bower install css-floatparts
 ```
 
 ## Usage
