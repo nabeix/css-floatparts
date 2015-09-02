@@ -1,48 +1,121 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
     <head>
         <meta charset="utf-8">
+        <title>CSS Floatparts</title>
         <link rel="stylesheet" href="build/floatparts.css">
-        <title>CSS Floatparts demo</title>
+        <style>
+         body {
+             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+             font-size: 16px;
+             margin: 0px;
+             padding: 0px;
+         }
+         .main {
+             margin-left: auto;
+             margin-right: auto;
+             max-width: 768px;
+         }
+         .title {
+             text-align: center;
+             background-color: #f1f1f1;
+             padding: 20px 0px;
+             margin: 0px 0px 20px 0px;
+         }
+         h1, h2, h3, h4 {
+             margin: 0px;
+             padding: 0px;
+         }
+         .text-center {
+             text-align: center;
+         }
+         a.btn {
+             background: #2a7fb2;
+             border: #2a7fb2 solid 1px;
+             cursor: pointer;
+             -webkit-font-smoothing: antialiased;
+             font-weight: 900;
+             border-radius: 3px;
+             color: #fff;
+             display: inline-block;
+             font-size: 16px;
+             padding: 6px 12px;
+             text-decoration: none;
+             text-align: center;
+             min-width: 60px;
+             position: relative;
+             transition: color .1s;
+         }
+        </style>
+        <script src="./examples/jquery-2.1.4.min.js"></script>
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script>
+         $(function() {
+             $("#modal-open-btn").bind("click", function() {
+                 $("#modal").addClass("flp-show");
+             });
+             $("#modal-close-btn").bind("click", function() {
+                 $("#modal").removeClass("flp-show");
+             });
+         });
+        </script>
     </head>
     <body>
-        <h1>CSS Floatparts demo</h1>
-        <p>A set of modal, dialog and tooltip using only CSS3.</p>
-        <h2>Modal</h2>
-        <pre class="prettyprint lang-html">
+        <div id="modal" class="flp-modal">
+            <div class="content">
+                <div class="header">
+                    <h3>Modal header</h3>
+                </div>
+                <div class="body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="footer text-center">
+                    <a class="btn" id="modal-close-btn">close</a>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <h1>CSS Floatparts</h1>
+            <p>A set of modal, dialog and tooltip using only CSS3.</p>
+        </div>
+        <div class="main">
+            <h2>Modal</h2>
+            <a class="btn" id="modal-open-btn">open demo modal</a>
+            <pre class="prettyprint lang-html">
 &lt;div class=&quot;flp-modal flp-show&quot;&gt;
     &lt;div class=&quot;content&quot;&gt;
         &lt;div class=&quot;header&quot;&gt;
             &lt;h3&gt;Modal header&lt;/h3&gt;
         &lt;/div&gt;
         &lt;div class=&quot;body&quot;&gt;
-            Modal body
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...
         &lt;/div&gt;
         &lt;div class=&quot;footer&quot;&gt;
-            Modal footer
+            &lt;a id=&quot;modal-close-btn&quot;&gtclose&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-        </pre>
-        <h2>Dialog</h2>
-        <pre class="prettyprint lang-html">
-&lt;div id=&quot;my-dialog&quot; class=&quot;flp-dialog&quot;&gt;
+&lt;/div&gt;</pre>
+            <h2>Dialog</h2>
+            <pre class="prettyprint lang-html">
+&lt;div class=&quot;flp-dialog flp-show&quot;&gt;
     &lt;div class=&quot;header&quot;&gt;
-        &lt;h3&gt;Dialog&lt;/h3&gt;
+        &lt;h3&gt;Dialog header&lt;/h3&gt;
     &lt;/div&gt;
     &lt;div class=&quot;body&quot;&gt;
-        &lt;div class=&quot;example-text&quot;&gt;
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        &lt;/div&gt;
+        Diaog Body
     &lt;/div&gt;
     &lt;div class=&quot;footer&quot;&gt;
+        Dialog footer
     &lt;/div&gt;
-&lt;/div&gt;
-        </pre>
-        <h2>Tooltip</h2>
-        <pre class="prettyprint lang-html">
-
-        </pre>
+&lt;/div&gt;</pre>
+            <h2>Tooltip</h2>
+            <pre class="prettyprint lang-html">
+&lt;div class=&quot;flp-tooltip-holder&quot;&gt;
+    Tooltip holder
+    &lt;span class=&quot;flp-tooltip-top&quot;&gt;
+        Tooltip text
+    &lt;/span&gt;
+&lt;/div&gt;</pre>
+        </div>
     </body>
 </html>
