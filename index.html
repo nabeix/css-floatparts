@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>CSS Floatparts</title>
         <link rel="stylesheet" href="build/floatparts.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
         <style>
          body {
              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,7 +20,7 @@
          .title {
              text-align: center;
              background-color: #f1f1f1;
-             padding: 20px 0px;
+             padding: 30px 0px;
              margin: 0px 0px 20px 0px;
          }
          h1, h2, h3, h4 {
@@ -30,8 +31,7 @@
              text-align: center;
          }
          a.btn {
-             background: #2a7fb2;
-             border: #2a7fb2 solid 1px;
+             background: #2a7fe5;
              cursor: pointer;
              -webkit-font-smoothing: antialiased;
              font-weight: 900;
@@ -70,7 +70,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
                 <div class="footer text-center">
-                    <a class="btn" id="modal-close-btn">close</a>
+                    <a class="btn" id="modal-close-btn">Close</a>
                 </div>
             </div>
         </div>
@@ -78,11 +78,14 @@
             <h1>CSS Floatparts</h1>
             <p>A set of modal, dialog and tooltip using only CSS3.</p>
         </div>
+        <div class="fork-me-on-github">
+            <a href="https://github.com/nabeix/css-floatparts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+        </div>
         <div class="main">
             <h2>Modal</h2>
-            <a class="btn" id="modal-open-btn">open demo modal</a>
+            <a class="btn" id="modal-open-btn">Open Demo Modal</a>
             <pre class="prettyprint lang-html">
-&lt;div class=&quot;flp-modal flp-show&quot;&gt;
+&lt;div class=&quot;flp-modal&quot;&gt;
     &lt;div class=&quot;content&quot;&gt;
         &lt;div class=&quot;header&quot;&gt;
             &lt;h3&gt;Modal header&lt;/h3&gt;
@@ -95,6 +98,17 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
+            To show modal, add the flp-show class to the modal element.
+            The following code is example add/remove the flp-show class using jQuery.
+            <pre class="prettyprint lang-js">
+$(function() {
+    $(&quot;#modal-open-btn&quot;).bind(&quot;click&quot;, function() {
+        $(&quot;#modal&quot;).addClass(&quot;flp-show&quot;);
+    });
+    $(&quot;#modal-close-btn&quot;).bind(&quot;click&quot;, function() {
+        $(&quot;#modal&quot;).removeClass(&quot;flp-show&quot;);
+    });
+});</pre>
             <h2>Dialog</h2>
             <pre class="prettyprint lang-html">
 &lt;div class=&quot;flp-dialog flp-show&quot;&gt;
