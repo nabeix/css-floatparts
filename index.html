@@ -46,6 +46,11 @@
              position: relative;
              transition: color .1s;
          }
+         code {
+             background-color: rgba(200,100,0,0.1);
+             border-radius: 3px;
+             padding: 0px 4px;
+         }
         </style>
         <script src="./examples/jquery-2.1.4.min.js"></script>
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
@@ -83,7 +88,12 @@
         </div>
         <div class="main">
             <h2>Modal</h2>
-            <a class="btn" id="modal-open-btn">Open Demo Modal</a>
+            <p>
+                <a class="btn" id="modal-open-btn">Open Demo Modal</a>
+            </p>
+            <p>
+                A modal is created by adding the <code>.flp-modal</code> class to any <code>&lt;div&gt;</code> element. The content of the modal should be in the <code>.content</code> class.
+            </p>
             <pre class="prettyprint lang-html">
 &lt;div class=&quot;flp-modal&quot;&gt;
     &lt;div class=&quot;content&quot;&gt;
@@ -98,8 +108,10 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
-            To show modal, add the flp-show class to the modal element.
-            The following code is example add/remove the flp-show class using jQuery.
+            <p>
+                To show modal, add the <code>.flp-show</code> class to the modal element.
+                The following code is an example of adding/removing the <code>.flp-show</code> class using jQuery.
+            </p>
             <pre class="prettyprint lang-js">
 $(function() {
     $(&quot;#modal-open-btn&quot;).bind(&quot;click&quot;, function() {
