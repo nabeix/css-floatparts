@@ -92,7 +92,7 @@ $tooltip-font-size: 16px;
 // - placeholder
 
 %content-base {
-  position: absolute;
+  position: fixed;
   background-color: $content-bg;
   box-shadow: $content-box-shadow;
   opacity: 0;
