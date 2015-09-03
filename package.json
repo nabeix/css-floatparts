@@ -1,6 +1,6 @@
 {
   "name": "css-floatparts",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "A set of modal, dialog and tooltio using only CSS3.",
   "main": "index.js",
   "directories": {
