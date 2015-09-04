@@ -51,6 +51,16 @@
              border-radius: 3px;
              padding: 0px 4px;
          }
+         #tooltips {
+             width: 80%;
+             padding: 30px;
+             margin: 0 auto;
+             text-align: center;
+             background-color: coral;
+             font-size: 20px;
+             border-radius: 5px;
+             cursor: pointer;
+         }
         </style>
         <script src="./examples/jquery-2.1.4.min.js"></script>
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
@@ -87,7 +97,7 @@
         </div>
         <div id="dialog" class="flp-dialog">
             <div class="header">
-                <h3>Modal header</h3>
+                <h3>Dialog header</h3>
             </div>
             <div class="body">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -130,13 +140,11 @@
                 The following code is an example of adding/removing the <code>.flp-show</code> class using jQuery.
             </p>
             <pre class="prettyprint lang-js">
-$(function() {
-    $(&quot;#modal-open-btn&quot;).bind(&quot;click&quot;, function() {
-        $(&quot;#modal&quot;).addClass(&quot;flp-show&quot;);
-    });
-    $(&quot;#modal-close-btn&quot;).bind(&quot;click&quot;, function() {
-        $(&quot;#modal&quot;).removeClass(&quot;flp-show&quot;);
-    });
+$(&quot;#modal-open-btn&quot;).bind(&quot;click&quot;, function() {
+    $(&quot;#modal&quot;).addClass(&quot;flp-show&quot;);
+});
+$(&quot;#modal-close-btn&quot;).bind(&quot;click&quot;, function() {
+    $(&quot;#modal&quot;).removeClass(&quot;flp-show&quot;);
 });</pre>
             <h2>Dialog</h2>
             <p>
@@ -146,22 +154,52 @@ $(function() {
                 A dialog is created by adding the <code>.flp-dialog</code> class to any <code>&lt;div&gt;</code> element.
             </p>
             <pre class="prettyprint lang-html">
-&lt;div class=&quot;flp-dialog flp-show&quot;&gt;
+&lt;div class=&quot;flp-dialog&quot;&gt;
     &lt;div class=&quot;header&quot;&gt;
         &lt;h3&gt;Dialog header&lt;/h3&gt;
     &lt;/div&gt;
     &lt;div class=&quot;body&quot;&gt;
-        Diaog Body
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...
     &lt;/div&gt;
     &lt;div class=&quot;footer&quot;&gt;
-        Dialog footer
+        &lt;a id=&quot;dialog-close-btn&quot;&gtclose&lt;/a&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
+            <p>
+                To show modal, add the <code>.flp-show</code> class to the dialog element.
+                The following code is an example of adding/removing the <code>.flp-show</code> class using jQuery.
+            </p>
+            <pre class="prettyprint lang-js">
+$(&quot;#dialog-open-btn&quot;).bind(&quot;click&quot;, function() {
+    $(&quot;#dialog&quot;).addClass(&quot;flp-show&quot;);
+});
+$(&quot;#dialog-close-btn&quot;).bind(&quot;click&quot;, function() {
+    $(&quot;#dialog&quot;).removeClass(&quot;flp-show&quot;);
+});</pre>
             <h2>Tooltip</h2>
+            <p>
+                <div id="tooltips" class="flp-tooltip-holder">
+                    Tooltips appear by mouse hover
+                    <span class="flp-tooltip-top flp-enable-hover">tooltip top</span>
+                    <span class="flp-tooltip-top-left flp-enable-hover">tooltip top-left</span>
+                    <span class="flp-tooltip-top-right flp-enable-hover">tooltip top-right</span>
+                    <span class="flp-tooltip-bottom flp-enable-hover">tooltip bottom</span>
+                    <span class="flp-tooltip-bottom-left flp-enable-hover">tooltip bottom-left</span>
+                    <span class="flp-tooltip-bottom-right flp-enable-hover">tooltip bottom-right</span>
+                    <span class="flp-tooltip-left flp-enable-hover">tooltip left</span>
+                    <span class="flp-tooltip-right flp-enable-hover">tooltip right</span>
+                </div>
+            </p>
+            <p>
+                A tooltip is created by adding the tooltip base class(e.g. <code>.flp-tooltip-top</code>) to any element. And should add the <code>.tooltip-holder</code> class to the element has the tooltip.
+            </p>
+            <p>
+                As default, the tooltip is shown by adding the <code>.flp-show</code> class to the tooltip element. Instead of the <code>.flp-show</code> class, the <code>.flp-enable-hover</code> class elables the tooltip to show automatically by mouse hover.
+            </p>
             <pre class="prettyprint lang-html">
 &lt;div class=&quot;flp-tooltip-holder&quot;&gt;
     Tooltip holder
-    &lt;span class=&quot;flp-tooltip-top&quot;&gt;
+    &lt;span class=&quot;flp-tooltip-top flp-enable-hover&quot;&gt;
         Tooltip text
     &lt;/span&gt;
 &lt;/div&gt;</pre>
