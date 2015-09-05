@@ -2,6 +2,8 @@
 
 A set of modal, dialog and tooltip using only CSS3.
 
+[Demo](http://nabeix.github.io/css-floatparts/)
+
 ## Install
 
 Get floatparts.css and floatparts.min.css from [here](https://github.com/nabeix/css-floatparts/tree/master/build) or bower.
