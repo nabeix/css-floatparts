@@ -24,97 +24,65 @@
 }
 @-webkit-keyframes animation-slide-down {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     top: -20%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     top: 20%;
   }
 }
 @keyframes animation-slide-down {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     top: -20%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     top: 20%;
   }
 }
 @-webkit-keyframes animation-slide-up {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     top: 120%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     top: 20%;
   }
 }
 @keyframes animation-slide-up {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     top: 120%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     top: 20%;
   }
 }
 @-webkit-keyframes animation-slide-left-in {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     left: -20%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     left: 50%;
   }
 }
 @keyframes animation-slide-left-in {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     left: -20%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     left: 50%;
   }
 }
 @-webkit-keyframes animation-slide-right-in {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     left: 120%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     left: 50%;
   }
 }
 @keyframes animation-slide-right-in {
   from {
-    opacity: 0;
-    filter: alpha(opacity=0);
     left: 120%;
   }
   to {
-    opacity: 1;
-    filter: alpha(opacity=100);
     left: 50%;
   }
 }
