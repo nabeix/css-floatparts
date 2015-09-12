@@ -2,6 +2,8 @@
 
 A set of modal, dialog and tooltip using only CSS3.
 
+[Demo](http://nabeix.github.io/css-floatparts/)
+
 ## Install
 
 Get floatparts.css and floatparts.min.css from [here](https://github.com/nabeix/css-floatparts/tree/master/build) or bower.
@@ -67,8 +69,9 @@ Initially, the dialog is hidden. To show the dialog, add the `.flp-show` class.
 
 ### Tooltip
 
-A tooltip is created by adding the tooltip base class(e.g. `.flp-tooltip-top`) to any `<span>` or `<div>` element.
-And should add the `.tooltip-holder` class to the element has the tooltip.
+A tooltip is created by adding the tooltip class (e.g. `.flp-tooltip-top`) to any element. And the `.tooltip-holder` class need to be added to the element has the tooltip.
+
+As default, the tooltip is shown by adding the `.flp-show` class to the tooltip element. Instead of the `.flp-show` class, the `.flp-enable-hover` class elables the tooltip to show automatically by mouse hover.
 
 ```html
 <div class="flp-tooltip-holder">
@@ -76,9 +79,6 @@ And should add the `.tooltip-holder` class to the element has the tooltip.
     <span class="flp-tooltip-right flp-enable-hover">tooltip here</span>
 </div>
 ```
-
-As default, show the tooltip by adding the `.flp-show` class to the tooltip base class.
-Instead of the `.flp-show` class, the `.flp-enable-hover` class elables the tooltip to show automatically by mouse hover.
 
 ### Animations
 
