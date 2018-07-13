@@ -18,6 +18,12 @@ Get floatparts.css and floatparts.min.css from [here](https://github.com/nabeix/
 bower install css-floatparts
 ```
 
+### CDN
+
+```
+<link rel="stylesheet" href="https://cdn.rawgit.com/nabeix/css-floatparts/master/build/floatparts.min.css">
+```
+
 ## Usage
 
 ### Modal
